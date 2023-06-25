@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <style>
+   
+       
+        /*set a style for the buttons*/
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+       
+        /* set a hover effect for the button*/
+        button:hover {
+            opacity: 0.8;
+        }
+       
+        /*set extra style for the cancel button*/
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+        .root{
+            text-align: center;
+            position: realtive;
+        }
+       
+        /*centre the display image inside the container*/
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+            position: relative;
+        }
+       
+        /*set image properties*/
+        img.avatar {
+            width: 40%;
+            border-radius: 50%;
+        }
+       
+        /*set padding to the container*/
+        .container {
+            padding: 16px;
+        }
+         
+        /*set the forgot password text*/
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+       
+        /*set the Modal background*/
+        .admin {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+        .user {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+       
+        /*style the model content box*/
+        .admin-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .user-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto;
+            border: 1px solid #888;
+            width: 80%;
+        }
+       
+        /*style the close button*/
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+        }
+         
+        .close:hover,
+        .close:focus {
+            color: red;
+            cursor: pointer;
+        }
+       
+        /* add zoom animation*/
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+         
+        @-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+         
+        @keyframes animatezoom {
+            from {
+                transform: scale(0)
+            }
+            to {
+                transform: scale(1)
+            }
+        }
+         
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+    </style>
+<body>
+    <div class="root">
+        
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src=
+                    "https://i.postimg.cc/0rg7VDKV/logo.png" alt="Avatar">
+                    <h1>Welcome {{username}}</h1>
+
+            </div>
+        
+        <button action='/listordersName' method='post' onclick="window.location.href='/listordersName'" style="width:auto;">All Orders Name</button>
+        <button action='/listdeliverdetails' method='post' onclick="window.location.href='/listdeliverdetails'" style="width:auto;">All Delivery details</button>
+        <button action='/shipperdetails' method='post' onclick="window.location.href='/shipperdetails'" style="width:auto;">Shipper details</button>
+        <button action='/stockpage' method='post' onclick="window.location.href='/stockpage'" style="width:auto;">Total stock</button>
+        <button action='/updateproduct' method='post' onclick="window.location.href='/updateproduct'" style="width:auto;">Update Product Quantity</button>
+        <button action='/productlist' method='post' onclick="window.location.href='/productlist'" style="width:auto;">Products</button>
+        <button action='/address' method='post' onclick="window.location.href='/address'" style="width:auto;">No of orders delivered Address</button>
+    
+</div>
+</body>
+</html>
